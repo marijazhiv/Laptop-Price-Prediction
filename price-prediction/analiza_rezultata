@@ -1,0 +1,43 @@
+- MAE (Mean Absolute Error): Ova metrika pokazuje prosečnu apsolutnu grešku predviđanja cena. Manja MAE je bolja.
+- R2-score: Ova metrika meri koliko dobro model objašnjava varijaciju u podacima. Veći R2-score je bolji.
+
+Dobijeni rezultati: 
+I)
+Training Linear Regression...
+Cross-validation MAE: 232.130680509395
+Cross-validation R2-score: 0.6946056183912206
+Test MAE: 191.55682687636428
+Test R2-score: 0.8379233989317012
+
+II)
+Training Decision Tree...
+Cross-validation MAE: 229.85209189823337
+Cross-validation R2-score: 0.6964209825040237
+Test MAE: 218.90496168582376
+Test R2-score: 0.6860572384145909
+
+III)
+Training Extra Trees...
+Cross-validation MAE: 202.88086692399705
+Cross-validation R2-score: 0.7768973025691244
+Test MAE: 213.20970383141758
+Test R2-score: 0.6950290179476795
+
+IV)
+Training Ridge Regression...
+Cross-validation MAE: 186.09221449618232
+Cross-validation R2-score: 0.8317081339108888
+Test MAE: 169.06623724395155
+Test R2-score: 0.8738454042739091
+
+Zaključak:
+
+Ridge Regression model pokazuje najbolje performanse na testiranju, sa najnižim MAE od 169.07 i najvišim R2-score od 0.8738. To znači da Ridge Regression model najpreciznije predviđa cene laptopova u poređenju sa ostalim modelima koje sam testirala.
+
+Random Forest takođe pokazuje solidne performanse sa Test MAE od 186.45 i Test R2-score od 0.7478, što ga čini drugim najboljim modelom u ovom poređenju.
+
+Na osnovu priloženih rezultata, najmanje uspešan model je Decision Tree.
+Test MAE: 218.90
+Test R2-score: 0.6861
+
+Stoga, na osnovu pruženih metrika, možemo zaključiti da je Ridge Regression najuspešniji model za naš problem predviđanja cena laptopova, dok je Random Forest takođe dobar izbor sa nešto manje preciznosti u poređenju sa Ridge Regression modelom.
