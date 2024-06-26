@@ -27,8 +27,8 @@ This project aims to predict the prices of laptops using machine learning regres
   3. **Dataset:**
      Place your dataset file (`laptop_price0.csv`) in the project directory.
 
-- **Usage**
+  4. **Usage**
 
-  Run the script `main.py` to train regression models, perform evaluations, and predict laptop prices for new input data.
-  ```bash
-  python main.py
+    Run the script `main.py` to train regression models, perform evaluations, and predict laptop prices for new input data.
+    ```bash
+    python main.py
