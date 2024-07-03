@@ -1,34 +1,24 @@
 # Laptop Price Prediction
 
-Predicting laptop prices based on various features using machine learning regression models.
+## Project Description
 
-## Overview
+This project focuses on predicting laptop prices based on various features using machine learning models. The goal is to build a model that can accurately estimate laptop prices from information such as screen size, weight, company, processor, RAM, GPU, and operating system.
 
-This project aims to predict the prices of laptops using machine learning regression techniques. It involves preprocessing the dataset, training multiple regression models, evaluating their performance, and predicting prices for new laptop specifications entered interactively by the user.
+### Models Used in the Project
 
-## Table of Contents
+- **Random Forest Regressor**
+- **Decision Tree Regressor**
+- **Extra Trees Regressor**
+- **Ridge Regression**
+- **Linear Regression**
 
-- **Setup**
-  
-  1. **Clone the repository:**
-     ```bash
-     git clone https://github.com/your_username/laptop-price-prediction.git
-     cd laptop-price-prediction
-     ```
+### Hyperparameter Tuning
 
-  2. **Install dependencies:**
-     Make sure you have Python 3.x installed. Install required libraries using pip:
-     ```bash
-     pip install -r requirements.txt
-     ```
+To improve model performance, different hyperparameter tuning techniques were used, including **RandomizedSearchCV** for complex models like Random Forest, Decision Tree, and Extra Trees, and **GridSearchCV** for Ridge Regression.
 
-     This will install the necessary libraries such as `pandas`, `scikit-learn`, and their dependencies.
+## Installation
 
-  3. **Dataset:**
-     Place your dataset file (`laptop_price0.csv`) in the project directory.
+To run this project, you need to have the following Python libraries installed. You can install them using `pip`:
 
-  4. **Usage**
-
-    Run the script `main.py` to train regression models, perform evaluations, and predict laptop prices for new input data.
-    ```bash
-    python main.py
+```bash
+pip install pandas scikit-learn
