@@ -2,42 +2,123 @@
 - R2-score: Ova metrika meri koliko dobro model objašnjava varijaciju u podacima. Veći R2-score je bolji.
 
 Dobijeni rezultati: 
-I)
-Training Linear Regression...
-Cross-validation MAE: 232.130680509395
-Cross-validation R2-score: 0.6946056183912206
-Test MAE: 191.55682687636428
-Test R2-score: 0.8379233989317012
 
-II)
-Training Decision Tree...
-Cross-validation MAE: 229.85209189823337
-Cross-validation R2-score: 0.6964209825040237
-Test MAE: 218.90496168582376
-Test R2-score: 0.6860572384145909
+Training and evaluating Random Forest without hyperparameter tuning...
 
-III)
-Training Extra Trees...
-Cross-validation MAE: 202.88086692399705
-Cross-validation R2-score: 0.7768973025691244
-Test MAE: 213.20970383141758
-Test R2-score: 0.6950290179476795
+Random Forest - Cross-validation MAE: 192.0803679895072
+Random Forest - Cross-validation R2-score: 0.791004420972351
+Random Forest - Test MAE: 186.44753266101077
+Random Forest - Test R2-score: 0.7478479133554965
 
-IV)
-Training Ridge Regression...
-Cross-validation MAE: 186.09221449618232
-Cross-validation R2-score: 0.8317081339108888
-Test MAE: 169.06623724395155
-Test R2-score: 0.8738454042739091
+Training and evaluating Decision Tree without hyperparameter tuning...
 
-Zaključak:
+Decision Tree - Cross-validation MAE: 229.85209189823337
+Decision Tree - Cross-validation R2-score: 0.6964209825040237
+Decision Tree - Test MAE: 218.90496168582376
+Decision Tree - Test R2-score: 0.6860572384145909
 
-Ridge Regression model pokazuje najbolje performanse na testiranju, sa najnižim MAE od 169.07 i najvišim R2-score od 0.8738. To znači da Ridge Regression model najpreciznije predviđa cene laptopova u poređenju sa ostalim modelima koje sam testirala.
+Training and evaluating Extra Trees without hyperparameter tuning...
 
-Random Forest takođe pokazuje solidne performanse sa Test MAE od 186.45 i Test R2-score od 0.7478, što ga čini drugim najboljim modelom u ovom poređenju.
+Extra Trees - Cross-validation MAE: 202.88086692399705
+Extra Trees - Cross-validation R2-score: 0.7768973025691244
+Extra Trees - Test MAE: 213.20970383141758
+Extra Trees - Test R2-score: 0.6950290179476795
 
-Na osnovu priloženih rezultata, najmanje uspešan model je Decision Tree.
-Test MAE: 218.90
+Training and evaluating Ridge Regression without hyperparameter tuning...
+
+Ridge Regression - Cross-validation MAE: 186.09221449618232
+Ridge Regression - Cross-validation R2-score: 0.8317081339108888
+Ridge Regression - Test MAE: 169.06623724395155
+Ridge Regression - Test R2-score: 0.8738454042739091
+
+Training and evaluating Linear Regression without hyperparameter tuning...
+
+Linear Regression - Cross-validation MAE: 232.130680509395
+Linear Regression - Cross-validation R2-score: 0.6946056183912206
+Linear Regression - Test MAE: 191.55682687636428
+Linear Regression - Test R2-score: 0.8379233989317012
+
+Tuning hyperparameters for Random Forest...
+Fitting 5 folds for each of 10 candidates, totalling 50 fits
+Best parameters for Random Forest: {'n_estimators': 150, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_depth': 20}
+
+Random Forest (optimized) - Cross-validation MAE: 191.6333159844179
+Random Forest (optimized) - Cross-validation R2-score: 0.7898824702093936
+Random Forest (optimized) - Test MAE: 191.2684375797639
+Random Forest (optimized) - Test R2-score: 0.7510095706357454
+
+Tuning hyperparameters for Decision Tree...
+Fitting 5 folds for each of 10 candidates, totalling 50 fits
+Best parameters for Decision Tree: {'min_samples_split': 5, 'min_samples_leaf': 1, 'max_depth': 30}
+
+Decision Tree (optimized) - Cross-validation MAE: 230.41506363813056
+Decision Tree (optimized) - Cross-validation R2-score: 0.7068857917359168
+Decision Tree (optimized) - Test MAE: 237.5944827586207
+Decision Tree (optimized) - Test R2-score: 0.5546298609007784
+
+Tuning hyperparameters for Extra Trees...
+Fitting 5 folds for each of 10 candidates, totalling 50 fits
+Best parameters for Extra Trees: {'n_estimators': 150, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_depth': 30}
+
+Extra Trees (optimized) - Cross-validation MAE: 202.41853526473898
+Extra Trees (optimized) - Cross-validation R2-score: 0.7798201505873659
+Extra Trees (optimized) - Test MAE: 214.22735200781972
+Extra Trees (optimized) - Test R2-score: 0.6943087771881409
+
+Tuning hyperparameters for Ridge Regression...
+Fitting 5 folds for each of 7 candidates, totalling 35 fits
+Best parameters for Ridge Regression: {'alpha': 1}
+
+Ridge Regression (optimized) - Cross-validation MAE: 186.09221449618232
+Ridge Regression (optimized) - Cross-validation R2-score: 0.8317081339108888
+Ridge Regression (optimized) - Test MAE: 169.06623724395155
+Ridge Regression (optimized) - Test R2-score: 0.8738454042739091
+
+Linear Regression (non-optimized) - Cross-validation MAE: 232.130680509395
+Linear Regression (non-optimized) - Cross-validation R2-score: 0.6946056183912206
+Linear Regression (non-optimized) - Test MAE: 191.55682687636428
+Linear Regression (non-optimized) - Test R2-score: 0.8379233989317012
+
+Enter laptop details:
+Company:
+Product:
+Type Name:
+Inches:
+Screen Resolution:
+CPU:
+RAM:
+Memory:
+GPU:
+Operating System:
+Weight (in kg):
+
+Predicted prices with non-optimized models:
+Predicted Price (Random Forest): [879.6106]
+Predicted Price (Decision Tree): [739.]
+Predicted Price (Extra Trees): [758.0893]
+Predicted Price (Ridge Regression): [902.34647763]
+Predicted Price (Linear Regression): [809.96443662]
+
+Predicted prices with optimized models:
+Predicted Price (Random Forest): [892.60170015]
+Predicted Price (Decision Tree): [739.]
+Predicted Price (Extra Trees): [762.64817999]
+Predicted Price (Ridge Regression): [902.34647763]
+Predicted Price (Linear Regression): [809.96443662]
+
+Ridge Regression je najbolji model pre i nakon optimizacije. Ima najmanju vrednost MAE i najvišu vrednost R2-score na test skupu. MAE je 169.07, a R2-score je 0.87, što ukazuje na visoku tačnost predikcija.​
+
+Random Forest takođe pokazuje solidne performanse sa Test MAE od 186.45 i Test R2-score od 0.7478, što ga čini drugim najboljim modelom u ovom poređenju.​
+
+​Na osnovu dobijenih rezultata, najmanje uspešan model je Decision Tree.​
+Test MAE: 218.90​
 Test R2-score: 0.6861
 
-Stoga, na osnovu pruženih metrika, možemo zaključiti da je Ridge Regression najuspešniji model za naš problem predviđanja cena laptopova, dok je Random Forest takođe dobar izbor sa nešto manje preciznosti u poređenju sa Ridge Regression modelom.
+Uspešnost optimizacije parametara​>
+Random Forest: Parametri su optimizovani, ali nije bilo značajnog poboljšanja u performansama. Test MAE je malo porasla (sa 186.45 na 190.62), dok je R2-score ostao praktično isti.​
+
+Decision Tree: Optimzacija je dovela do pogoršanja performansi, što može značiti da je model previše prilagođen treniranju (overfitting). Test MAE se povećala, a R2-score značajno opao.​
+
+Extra Trees: Optimizacija nije donela značajno poboljšanje. Test MAE je ostala gotovo ista, dok je R2-score malo opao.​
+
+Ridge Regression: Parametri optimizacije su identični početnim vrednostima, što znači da Ridge Regression model već bio optimalno podešen pre hiperparametarske optimizacije.
